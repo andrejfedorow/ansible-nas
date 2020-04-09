@@ -25,6 +25,9 @@
   - import_tasks: tasks/general.yml
     tags: general
 
+  # - import_tasks: tasks/nginx.yml
+  #   tags: docker
+
   - import_tasks: tasks/docker.yml
     tags: docker
 
@@ -43,6 +46,8 @@
   - import_tasks: tasks/watchtower.yml
     when: (watchtower_enabled | default(False))
     tags: watchtower
+
+  - import_tasks: tasks/pi-hole.yml
 
   - import_tasks: tasks/plex.yml
     when: (plex_enabled | default(False))
