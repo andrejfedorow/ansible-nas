@@ -125,6 +125,10 @@
     when: (gitea_enabled | default(False))
     tags: gitea
 
+  - import_tasks: tasks/gitlab.yml
+    when: (gitlab_enabled | default(False))
+    tags: gitlab
+
   - import_tasks: tasks/timemachine.yml
     when: (timemachine_enabled | default(False))
     tags: timemachine
@@ -161,6 +165,10 @@
     when: (jackett_enabled | default(False))
     tags: jackett
 
+  - import_tasks: tasks/joomla.yml
+    when: (joomla_enabled | default(False))
+    tags: joomla
+
   - import_tasks: tasks/bitwarden.yml
     when: (bitwarden_enabled | default(False))
     tags: bitwarden
@@ -176,3 +184,51 @@
   - import_tasks: tasks/mosquitto.yml
     when: (mosquitto_enabled | default(False))
     tags: mosquitto
+
+  - import_tasks: tasks/homebridge.yml
+    when: (homebridge_enabled | default(False))
+    tags: homebridge
+
+  - import_tasks: tasks/calibre.yml
+    when: (calibre_enabled | default(False))
+    tags: calibre
+
+  - import_tasks: tasks/homeassistant.yml
+    when: (homeassistant_enabled | default(False))
+    tags: homeassistant
+
+  - import_tasks: tasks/bazarr.yml
+    when: (bazarr_enabled | default(False))
+    tags: bazarr
+
+  - import_tasks: tasks/openhab.yml
+    when: (openhab_enabled | default(False))
+    tags: openhab
+
+  - import_tasks: tasks/jellyfin.yml
+    when: (jellyfin_enabled | default(False))
+    tags: jellyfin
+
+  - import_tasks: tasks/cloudcmd.yml
+    when: (cloudcmd_enabled | default(False))
+    tags: cloudcmd
+
+  - import_tasks: tasks/ubooquity.yml
+    when: (ubooquity_enabled | default(False))
+    tags: ubooquity
+
+  - import_tasks: tasks/ombi.yml
+    when: (ombi_enabled | default(False))
+    tags: ombi
+
+  - import_tasks: tasks/lidarr.yml
+    when: (lidarr_enabled | default(False))
+    tags: lidarr
+
+  - import_tasks: tasks/serposcope.yml
+    when: (serposcope_enabled | default(False))
+    tags: serposcope
+
+  - import_tasks: tasks/virtual_desktop.yml
+    when: (virtual_desktop_enabled | default(False))
+    tags: virtual_desktop

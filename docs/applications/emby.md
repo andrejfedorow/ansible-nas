@@ -11,7 +11,7 @@ similar functionality.
 
 ## Usage
 
-Set `emby_enabled: true` in your `group_vars/all.yml` file. There are further
+Set `emby_enabled: true` in your `inventories/<your_inventory>/nas.yml` file. There are further
 parameters you can edit such as `movies_root` and `tv_root` lower down. 
 
 ## Specific Configuration
@@ -38,7 +38,7 @@ configuration directory read/write.
 Movie and TV show files are almost alway very large and pre-compressed. If you
 are using a specialized filesystem such as ZFS for bulk storage, you'll want to
 set the parameters accordingly. The [ZFS configuration
-documentation](../zfs/zfc_configuration.md) has an example of this.
+documentation](../zfs/zfs_configuration.md) has an example of this.
 
 
 ## Naming movies and TV shows
